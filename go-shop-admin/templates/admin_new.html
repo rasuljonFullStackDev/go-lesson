@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Add New Product</h1>
+    <form method="POST" action="/admin/product/create">
+        <p>Name: <input type="text" name="name" required></p>
+        <p>Price (in cents): <input type="number" name="price" required></p>
+        <p><button type="submit">Create</button></p>
+    </form>
+    <a href="/admin">Back to Admin</a>
+</body>
+</html>

@@ -1,0 +1,44 @@
+# Asosiy project root
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  # cmd/main.go ichidan build qilish
+  cmd = "go build -o ./tmp/main.exe ./cmd/main.go"
+
+  # build natijasi
+  bin = "tmp\\main.exe"
+
+  # build xatolik log fayli
+  log = "tmp\\build-errors.log"
+
+  # Watch qilinadigan fayl turlari
+  include_ext = ["go", "tpl", "tmpl", "html"]
+
+  # Quyidagi papkalarni kuzatmasin
+  exclude_dir = ["assets", "tmp", "vendor", "testdata"]
+
+  # build kechikish ms (1s)
+  delay = 1000
+
+  # build muvaffaqiyatsiz bo‘lsa to‘xtamasin
+  stop_on_error = false
+
+[color]
+  app = ""
+  build = "yellow"
+  main = "magenta"
+  runner = "green"
+  watcher = "cyan"
+
+[log]
+  main_only = false
+  silent = false
+  time = true
+
+[misc]
+  clean_on_exit = true
+
+[screen]
+  clear_on_rebuild = true
+  keep_scroll = true

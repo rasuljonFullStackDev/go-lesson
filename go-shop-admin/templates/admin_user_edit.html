@@ -1,0 +1,8 @@
+<h1>Edit User</h1>
+<form method="POST" action="/admin/users/update">
+  <input type="hidden" name="id" value="{{.ID}}">
+  <p>Username: <input type="text" name="username" value="{{.Username}}" required></p>
+  <p>New Password (leave blank to keep): <input type="password" name="password"></p>
+  <p><button type="submit">Update</button></p>
+</form>
+<a href="/admin/users">Back</a>

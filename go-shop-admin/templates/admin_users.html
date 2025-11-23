@@ -1,0 +1,17 @@
+<h1>Users</h1>
+<a href="/admin">Back to Admin</a> | <a href="/admin/users/new">Add New User</a>
+<table border="1">
+<tr><th>ID</th><th>Username</th><th>Actions</th></tr>
+{{range .}}
+<tr>
+  <td>{{.ID}}</td>
+  <td>{{.Username}}</td>
+  <td>
+    <a href="/admin/users/edit?id={{.ID}}">Edit</a> |
+    <a href="/admin/users/delete?id={{.ID}}" onclick="return confirm('Are you sure?')">Delete</a>
+  </td>
+</tr>
+{{else}}
+<tr><td colspan="3">No users found.</td></tr>
+{{end}}
+</table>

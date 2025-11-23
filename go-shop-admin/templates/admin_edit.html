@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <form method="POST" action="/admin/product/update">
+        <input type="hidden" name="id" value="{{.ID}}">
+        <p>Name: <input type="text" name="name" value="{{.Name}}" required></p>
+        <p>Price (in cents): <input type="number" name="price" value="{{.Price}}" required></p>
+        <p><button type="submit">Update</button></p>
+    </form>
+    <a href="/admin">Back to Admin</a>
+</body>
+</html>

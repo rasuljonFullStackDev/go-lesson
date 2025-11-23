@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Edit User</title></head>
+<body>
+<h1>Edit User</h1>
+<form method="post" action="/user/update">
+<input type="hidden" name="id" value="{{.ID}}">
+Username: <input type="text" name="username" value="{{.Username}}"><br>
+Email: <input type="text" name="email" value="{{.Email}}"><br>
+<input type="submit" value="Update">
+</form>
+<a href="/">Back</a>
+</body>
+</html>
